@@ -1,16 +1,20 @@
 # Connect to this API with these creds to retrieve sample data
 
-User/Pass  “notrehtad”/“K3GcbhDsq/vgNUo”
-https://srv.qryp.to/api/logsummary/825db136-ce87-444c-8b7c-89f6b49a00eb/
-options are [ “hour”, “day”, “week”, “month”, “quarter”, “year” ]
+- User/Pass  “notrehtad”/“K3GcbhDsq/vgNUo”
+- https://srv.qryp.to/api/logsummary/825db136-ce87-444c-8b7c-89f6b49a00eb/
+- options are [ “hour”, “day”, “week”, “month”, “quarter”, “year” ]
 
-Example:
-https://srv.qryp.to/api/logsummary/825db136-ce87-444c-8b7c-89f6b49a00eb/hour
+- Example: https://srv.qryp.to/api/logsummary/825db136-ce87-444c-8b7c-89f6b49a00eb/hour
 
 # Persist the Data into a model called Stats for each App
 
+```
 User has many Apps
+```
+
+```
 App has many Stats
+```
 
 ```
 App.openid_client_id = 825db136-ce87-444c-8b7c-89f6b49a00eb
