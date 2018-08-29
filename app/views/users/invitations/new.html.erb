@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+
+      <h4>Invite a team member</h4>
+      <p> If you created this account you will remain the primary admin and anyone you invite will be able to access the data.</p>
+
+
+      <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
+      <%= devise_error_messages! %>
+        <div class="form-group">
+        <% resource.class.invite_key_fields.each do |field| -%>
+          <%= f.label field %><br />
+          <%= f.text_field field, class: "form-control" %>
+        <% end -%>
+        </div>
+
+
+      <%= f.submit t("devise.invitations.new.submit_button"), class: "btn btn-success pull-right" %>
+
+      <% end %>
+
+</div>
+</div>

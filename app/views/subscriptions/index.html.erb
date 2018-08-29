@@ -1,0 +1,47 @@
+<section>
+  <h2 class="text-center">Select your plan</h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="price">
+        <li class="header">Basic</li>
+        <li class="grey">$10.0 / Month</li>
+        <li>10GB Storage</li>
+        <li>10 Emails</li>
+        <li>10 Domains</li>
+        <li>1GB Bandwidth</li>
+        <li class="grey">
+          <%= link_to "Sign Up", new_users_subscription_path(plan_id: "basic"), class: "btn btn-primary" %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <ul class="price">
+        <li class="header">Premium</li>
+        <li class="grey">$20.0 / Month</li>
+        <li>25GB Storage</li>
+        <li>25 Emails</li>
+        <li>25 Domains</li>
+        <li>2GB Bandwidth</li>
+        <li class="grey">
+          <%= link_to 'Sign Up', new_users_subscription_path(plan_id: "premium"), class: "btn btn-primary" %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <ul class="price">
+        <li class="header">Enterprize</li>
+        <li class="grey">$100.0 / 3 Months</li>
+        <li>50GB Storage</li>
+        <li>50 Emails</li>
+        <li>50 Domains</li>
+        <li>5GB Bandwidth</li>
+        <li class="grey">
+          <%= link_to 'Sign Up', new_users_subscription_path(plan_id: "enterpize"), class: "btn btn-primary" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

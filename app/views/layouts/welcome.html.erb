@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%= render "head_common" %>
+</head>
+
+<body>
+  <%= render 'user_header' %>
+    <div class="container">
+      <div class="mh-500">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'user_footer' %>
+      <%= render 'scripts' %>
+</body>
+
+</html>

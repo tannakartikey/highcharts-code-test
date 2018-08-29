@@ -1,0 +1,65 @@
+<table>
+  <tbody>
+    <tr>
+      <th>
+        <b>Django:</b>
+      </th>
+      <th>
+        <b>Python:</b>
+      </th>
+      <th>
+        <b>Host:</b>
+      </th>
+      <th>
+        <b>Strategy:</b>
+      </th>
+      <th>
+        <b>FIDO UAF</b>
+      </th>
+    </tr>
+    <tr>
+      <td>2.0</td>
+      <td>3</td>
+      <td>Heroku</td>
+      <td>OpenID Connect</td>
+      <td>Version 1.0</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<p>1. Build and deploy:</p>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>git clone https://github.com/Deauthorized/python_openidconnect_starter_app</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>cd python_openidconnect_starter_app</span></code></pre>
+<h5># with pip</h5>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>pipenv install</span></code></pre>
+<h5># with conda</h5>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>conda env create && source activate deauthorized-python-sample</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>createdb python_getting_started</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>python manage.py migrate</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>python manage.py collectstatic</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>heroku local </span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>heroku create</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>git config --list | grep heroku</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>git push heroku master</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>heroku run python manage.py migrate</span></code></pre>
+<pre class="prettyprint language-term"><code class="language-term"><span class="token input"><span class="token prompt">$ </span>heroku open</span></code></pre>
+<br>
+
+<p>2. Configure the OPENID_CLIENT_ID, OPENID_CLIENT_SECRET env for the starter app on Heroku. </p>
+
+<p> OPENID_CLIENT_ID:
+  <code>
+                                                 <%= @app.openid_client_id %>
+                                             </code>
+</p>
+<p> OPENID_CLIENT_SECRET: <code><%= @app.openid_client_secret %></code></p>
+<p>
+  <a href="#" class="pop">
+    <%= image_tag('heroku-env.png', style: "width: 400px; height: 264px;") %>
+  </a>
+</p>
+<p>3. Please set <b>https:/#{myappname}.herokuapp.com/openid_auth_callback</b> as the route for the callback -
+  <%= link_to 'edit the Callback URL', edit_app_path %>
+</p>
+<p>4. Use the Deauthorized mobile app to authenticate against the QR code</p>

@@ -1,0 +1,7 @@
+/*
+ * Manifest file for front styles, to be compiled into front.scss
+ *
+ *= require user/login-window
+ *= require_self
+ *= require_tree ./front
+ */

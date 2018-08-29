@@ -1,0 +1,88 @@
+<table class="table t-60">
+  <thead>
+    <tr>
+      <th>Config Option</th>
+      <th>Config Value</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>
+        <strong>App Name:</strong>
+      </td>
+      <td>
+        <code><%= @app.name %></code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Callback URL:</strong>
+      </td>
+      <td>
+        <code> <%= @app.openid_redirect_urls %>  </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong> OpenID Client ID:</strong>
+      </td>
+      <td>
+        <code>
+                                      <%= @app.openid_client_id %>
+                                  </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>OpenID Client Secret:</strong>
+      </td>
+      <td>
+        <code>
+                                      <%= @app.openid_client_secret %>
+                                  </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>OpenID Host:</strong>
+      </td>
+      <td>
+        <code>
+                                      <%= ENV["OPENID_HOST"] %>
+                                  </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>OpenID Port:</strong>
+      </td>
+      <td>
+        <code>
+                                      <%= ENV["OPENID_PORT"] %>
+                                  </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>OpenID Issuer:</strong>
+      </td>
+      <td>
+        <code>
+                                      <%= ENV["OPENID_ISSUER"] %>
+                                  </code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Token Endpoint Auth Method:</strong>
+      </td>
+      <td>
+        <code>
+                      <%= @app.token_endpoint_auth_method %>
+                    </code>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

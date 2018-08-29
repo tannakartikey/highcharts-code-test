@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Deauthorized</title>
+  <meta name="description" content="Deauthorized replaces email and passwords with public key cryptography and biometric authentication to eliminate identity theft.">
+  <meta name="keywords" content="software, mobile app, secruity, saas">
+  <meta name="author" content="Deauthorized">
+  <meta name="google-site-verification" content="kwpRh3pLNb2eJg2_M3csAQADTVzfI_XZShZ7lbFyuRU" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107914218-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107914218-1');
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6963d7">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#6963d7">
+  <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type =>  'image/x-icon' %>
+    <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag  'front', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" />
+        <link rel="application/vnd.ms-fontobject" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.eot" />
+        <link rel="application/font-woff" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.svg" />
+        <link rel="image/svg+xml" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.ttf" />
+        <link rel="application/font-sfnt" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.woff" />
+        <%= javascript_include_tag 'front'  %>
+          <%= javascript_pack_tag 'application' %>
+</head>
+
+<body>
+  <%= render 'header' %>
+    <%= yield %>
+      <%= render 'footer' %>
+        <%= render 'scripts' %>
+</body>
+
+</html>

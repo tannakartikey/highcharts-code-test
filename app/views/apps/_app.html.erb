@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <%= link_to app_path(app) do  %>
+      <%= app.name %>
+        <% end %>
+  </td>
+  <td>
+    <%= app.openid_redirect_urls %>
+  </td>
+  <td>
+    <%= app.platform %>
+  </td>
+  <td>
+    <%= link_to 'Edit App', edit_app_path(app) %>
+  </td>
+  <td>
+    <%= link_to 'Delete App', app_path(app), method: :delete, data: { confirm: 'Are you sure? This will remove the client id from the server and you will no longer be able to authenticate.' } %>
+  </td>
+
+</tr>

@@ -1,0 +1,28 @@
+<div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h4>Create an App <br> <small>Provision an OpenID Connect Client</small> </h4>
+      <p><b>Fill out the form and you'll be redirected to a configuration with all the deployment options available to you.</b></p>
+      <p><b>You need to provide a Callback URL, but if you don't have a URL yet, you can go back and change it later. </b></p>
+
+      <p>OpenID Connect allows you to register client application data with our provider. Please set your meta data according to this spec:
+        <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata" target="_blank">Open ID Connect Client
+                Meta Data Specs</a>. To see what our provider supports, see the well-known configuration for our
+        <a href="https://srv.qryp.to/op/.well-known/openid-configuration" target="_blank">provider.</a>
+      </p>
+      <p><b>All fields on this form are required</b>, but if you do not have a terms of service, policy, or logo - you can add any valid URL in the form to complete this process. If you move into production mode for real users, this information can be useful
+        for them so you probably want to update it before you go live. Once we go live out of private beta, logos will be used for branded login screens. </p>
+      <p>To deploy, you have several options:</p>
+      <ul>
+        <li>Deploy a sample to heroku </li>
+        <li>Clone the sample and then deploy to heroku</li>
+        <li>Roll your own OpenID Connect Client</li>
+      </ul>
+
+      <p>Heroku App Callback URL Configurations: <b>https:/#{myappname}.herokuapp.com/openid_auth_callback </b>
+      </p>
+      <br>
+      <%= render 'form', app: @app %>
+    </div>
+  </div>
+</div>

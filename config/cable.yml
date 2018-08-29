@@ -1,0 +1,10 @@
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: redis
+  url: redis://signal0x-001.plpahx.0001.use2.cache.amazonaws.com:6379
+  channel_prefix: signal0x_production

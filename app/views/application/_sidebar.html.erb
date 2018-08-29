@@ -1,0 +1,47 @@
+<nav class="hidden-md-down col-md-2 bg-faded sidebar">
+  <ul class="nav nav-pills flex-column">
+
+    <h4>Welcome</h4>
+    <li class="nav-item">
+      <%= link_to "<i class='fa fa-play'></i> Get Started".html_safe, get_started_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "<i class='fal fa-mobile-alt'></i> Mobile Apps".html_safe, mobile_apps_path, class: "nav-link" %>
+    </li>
+    <hr>
+    <h4>Manage</h4>
+    <li class="nav-item">
+      <%= link_to "<i class='fas fa-code'></i> Create an App".html_safe, new_app_path, class: "nav-link" %>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to "<i class='fal fa-fingerprint'></i> My Applications".html_safe, apps_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "<i class='fal fa-chart-line'></i>Analytics".html_safe, analytics_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link disabled"><i class='fal fa-table'></i>Logs <small>Coming soon!</small></a>
+    </li>
+
+    <hr>
+    <h4>Account </h4>
+    <li class="nav-item">
+      <%= link_to "<i class='far fa-user-alt'></i>My Profile".html_safe, edit_user_registration_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link disabled"><i class='far fa-address-card'></i>Account <small>Coming soon!</small></a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link disabled"><i class='fal fa-wallet'></i>Subscription <small>Coming soon!</small></a>
+    </li>
+    <hr>
+    <h4>Users </h4>
+    <li class="nav-item">
+      <a href="" class="nav-link disabled"><i class='fal fa-users'></i>Invite Users <small>Coming soon!</small></a>
+    </li>
+
+
+  </ul>
+
+</nav>

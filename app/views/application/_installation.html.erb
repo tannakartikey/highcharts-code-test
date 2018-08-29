@@ -1,0 +1,80 @@
+<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="start-tab" data-toggle="tab" href="#start" role="tab" aria-controls="start" aria-selected="true">
+      <i class="fas fa-shield-check"></i> Start</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="heroku-tab" data-toggle="tab" href="#heroku" role="tab" aria-controls="heroku" aria-selected="false">
+      <i class="far fa-cloud-upload"></i> Quick Deploy </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="build-tab" data-toggle="tab" href="#build" role="tab" aria-controls="build" aria-selected="false">
+      <i class="fas fa-terminal"></i> Build it locally</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="openid-tab" data-toggle="tab" href="#openid" role="tab" aria-controls="openid" aria-selected="false">
+      <i class="fab fa-openid"></i> Build a Client</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="architecture-tab" data-toggle="tab" href="#architecture" role="tab" aria-controls="architecture" aria-selected="false">
+      <i class="fal fa-sitemap"></i> Architecture</a>
+  </li>
+</ul>
+
+
+<div class="tab-content p-top-50" id="myTabContent">
+  <div class="tab-pane fade show active" id="start" role="tabpanel" aria-labelledby="start-tab">
+    <h4>Our Mission</h4>
+    <p>Our mission at Deauthorized is to provide the strongest authentication methods at the lowest cost with the fastest implementations. Our current offering includes FIDO UAF as a Service, but will soon include FIDO 2.0, FIDO U2F, HOTP, and TOTP.</p>
+    <h4>Architecture</h4>
+    <p>Our platform is based on
+      <a href="http://openid.net/connect/" target="_blank">OpenID Connect</a> in conjunction with
+      <a href="https://fidoalliance.org/specs/fido-uaf-v1.1-id-20170202/fido-uaf-overview-v1.1-id-20170202.html" target="_blank">
+    Fido UAF 1.0</a>. We allow dynamic client registration on our OpenID Connect Provider, so you can provision as many OpenID Clients as you like. </p>
+    <h4>Pricing </h4>
+    <p>Usage is based on the number of identities managed and authentications made in a given month. To get more info on our pricing please
+      <a href="mailto:reza@deauthorized.com">contact us</a>.
+    </p>
+    <h4>Enterprise Licenses</h4>
+    <p>Enterprise licenses are available upon request. </p>
+    <h4>Open Source</h4>
+    <p>If you are interested in contributing code or helping develop open source libraries, please contact us. </p>
+  </div>
+  <div class="tab-pane fade" id="heroku" role="tabpanel" aria-labelledby="heroku-tab">
+    <div class="">
+      <h3>Deploy to Heroku</h3>
+      <p>To get you up and running in under 10 minutes, we rolled a few sample apps with one click deploys to Heroku. Once you get it deployed, you can test the mobile app authenticator against the Fido UAF Server.
+      </p>
+
+      <%= link_to "Deploy to Heroku", new_app_path, class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="build" role="tabpanel" aria-labelledby="build-tab">
+    <h3>Build from source</h4>
+      <p>Optionally you can build the one of the sample apps locally and the deploy to heroku. </p>
+      <p>
+        <a href="https://github.com/deauthorized" target="_blank">Sample apps on Github</a>
+      </p>
+      <%= link_to "Build from source", new_app_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <div class="tab-pane fade" id="openid" role="tabpanel" aria-labelledby="openid-tab">
+    <h3>Roll an OpenID Connect Client</h3>
+    <p>The OpenID spec is available online and you can roll your own authentication to connect your app to our server. </p>
+    <p>
+      <a href="https://deauthorized.github.io/documentation-0.1/" target="_blank">Deauthroized OpenID Sample App Documentation</a>.
+    </p>
+    <p>
+      <a href="http://openid.net/developers/certified/" target="_blank">Certified OpenID Connect Implementations and Libraries</a>
+    </p>
+    <p>
+      <%= link_to "Register an Open ID Client on Deauthorized", new_app_path %>
+    </p>
+  </div>
+  <div class="tab-pane fade" id="architecture" role="tabpanel" aria-labelledby="architecture-tab">
+    <div class="">
+      <div class="" style="margin-top:-60px">
+        <%= image_tag('deauthorized-architecture.png', size: '900x700', class: 'img-fluid') %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<tr>
+  <td><%= user.email %></td>
+  <td><%= user.has_role?(:admin) ? 'Admin' : 'User' %></td>
+  <td><%= user.created_at %></td>
+  <td><%= user_status(user) %></td>
+</tr>

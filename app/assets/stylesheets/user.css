@@ -1,0 +1,6 @@
+/*
+ * Manifest file for front styles, to be compiled into user.scss
+ *
+ *= require_self
+ *= require_tree ./user
+ */

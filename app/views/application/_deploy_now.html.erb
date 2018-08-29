@@ -1,0 +1,46 @@
+<h4>1. Deploy Now
+</h4>
+<p>Please set <b>https:/#{myappname}.herokuapp.com/openid_auth_callback</b> as the route for the callback -
+  <%= link_to 'edit the Callback URL', edit_app_path %>
+</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Platform </th>
+      <th>Deploy </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/Deauthorized/rails_openidconnect_starter_app" target="_blank"> Rails Sample
+          App </a></td>
+
+      <td>
+        <a href="https://heroku.com/deploy?template=https://github.com/Deauthorized/rails_openidconnect_starter_app&env[OPENID_HOST]=<%= ENV['OPENID_HOST'] %>&env[OPENID_PORT]=<%= ENV['OPENID_PORT'] %>&env[OPENID_ISSUER]=<%= ENV['OPENID_ISSUER'] %>&env[OPENID_CLIENT_ID]=<%= @app.openid_client_id %>&env[OPENID_CLIENT_SECRET]=<%= @app.openid_client_secret  %>"
+          target="_blank">
+          <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Deauthorized/django_openidconnect_starter_app" target="_blank"> Django Sample
+          App
+        </a></td>
+
+      <td>
+        <a href="https://heroku.com/deploy?template=https://github.com/Deauthorized/django_openidconnect_starter_app&env[OPENID_HOST]=<%= ENV['OPENID_HOST'] %>&env[OPENID_PORT]=<%= ENV['OPENID_PORT'] %>&env[OPENID_ISSUER]=<%= ENV['OPENID_ISSUER'] %>&env[OPENID_CLIENT_ID]=<%= @app.openid_client_id %>&env[OPENID_CLIENT_SECRET]=<%= @app.openid_client_secret  %>"
+          target="_blank">
+          <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Deauthorized/nodejs_openidconnect_starter_app" target="_blank"> Express Sample
+              App
+            </a></td>
+
+      <td>
+        <a href="https://heroku.com/deploy?template=https://github.com/Deauthorized/nodejs_openidconnect_starter_app&env[OPENID_HOST]=<%= ENV['OPENID_HOST'] %>&env[OPENID_PORT]=<%= ENV['OPENID_PORT'] %>&env[OPENID_ISSUER]=<%= ENV['OPENID_ISSUER'] %>&env[OPENID_CLIENT_ID]=<%= @app.openid_client_id %>&env[OPENID_CLIENT_SECRET]=<%= @app.openid_client_secret  %>"
+          target="_blank">
+          <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,39 @@
+<%= form_for([:users, @app], local: true) do |form| %>
+
+  <% if app.errors.any? %>
+    <div class="error_explanation">
+      <ul>
+        <% app.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+      <h4>Create a new OpenID Connect Client (relying party)</h4>
+      <p>You can provision a new client application here. Please note that you need to implement an OpenID Connect Client on your app first. You can take a look at our <a href="https://deauthorized.github.io/documentation-0.1/" target="_blank">docs for some code examples</a>        on how to accomplish that.</p>
+      <p> If you create an app and did not enter the correct data, you cannot revert and edit it. </p>
+      <p> If you have any questions please use the chat window to the lower right hand corner of your screen and ask questions.</p>
+
+      <div class="form-group">
+        <%= form.label :domain, "Client Domain Name http://" %>
+          <%= form.text_field :domain, class: "form-control", placeholder: "http://mydomain.com" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :platform, "Platform Type" %>
+          <%= form.select :platform, [['Web', 'web']], {}, { class: "form-control" } %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :openid_redirect_urls, "OpenID Callback URL on Client Domain" %>
+          <%= form.text_area :openid_redirect_urls, rows: "5", class: "form-control", placeholder: "http://mydomain.com/oauth/callback OR http://mydomain.com/openid_auth_callback" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.submit class: "btn btn-large btn-success" %>
+          <%= link_to 'Back', apps_path, class: "btn btn-link" %>
+      </div>
+      <% end %>

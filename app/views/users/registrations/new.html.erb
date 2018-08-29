@@ -1,0 +1,47 @@
+<header class="header main-header header-style-3" id="circular-particles">
+  <div class="primary-trans-bg">
+    <div class="container margin-top-50">
+      <div class="outer">
+        <div class="inner">
+          <div class="row">
+            <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2 form-wrap">
+              <div class="text-center logo-wrap">
+                <h2>User Sign Up</h2>
+              </div>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
+                  <%= f.hidden_field :openid_identifier, value: @openid_identifier %>
+                    <%= f.hidden_field :openid_access_token, value: @openid_access_token %>
+                      <%= f.hidden_field :openid_id_token, value: @openid_id_token %>
+                        <div class="form-group col-md-12">
+                          <label for="exampleInputEmail1">Email Address</label>
+                          <%= f.email_field :email, placeholder: "Email", class: "form-control", autofocus: true %>
+                        </div>
+
+                        <% unless @openid_identifier.present? %>
+                          <div class="form-group col-md-12">
+                            <label for="password">Password</label>
+                            <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control", autofocus: true %>
+                          </div>
+
+                          <div class="form-group col-md-12">
+                            <label for="password">Confirm Password</label>
+                            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control", autofocus: true %>
+                          </div>
+                          <% end %>
+                            <div class="text-center col-md-12 mt10 mb20">
+                              <%= f.submit "Sign up", class: "btn se-btn btn-rounded" %>
+                            </div>
+                            <% end %>
+                              <div class="col-sm-12 text-center">
+                                <p class="text-muted mbn">Already Registered?
+                                  <%= render "users/shared/links" %>
+                                </p>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

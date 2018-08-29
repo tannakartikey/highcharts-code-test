@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h2>FIDO UAF - Biometric Encryption Protocol</h2>
+            <div class="" style="margin-top:0px">
+                <!-- <div class="architecture"></div> -->
+                <%= image_tag('deauthorized-architecture.png', size: '700x500', class: 'mobile-resize') %>
+            </div>
+        </div>
+        <div class="col-md-5 offset-md-1">
+            <div>
+                <h2>Login with FIDO UAF</h2>
+                <h4 class="t-60">1. Register and create an OpenID Client.</h4>
+                <h4>2. Install OpenID Connect. </h4>
+                <h4>3. Request auth using QR + fingerprint.</h4>
+                <h4>4. FIDO UAF Protocol (the magic).</h4>
+                <h4>5. Secure Authentication.</h4>
+
+            </div>
+            <%= link_to "Setup OpenID Connect and FIDO UAF", users_create_open_id_app_url, class: "btn btn-lg btn-primary t-60 text-center" %>
+
+        </div>
+    </div>
+</div>

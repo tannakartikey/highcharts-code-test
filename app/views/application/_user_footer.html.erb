@@ -1,0 +1,52 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Get started</h4>
+        <%= link_to  get_started_path, class: "footer-link" do %>
+          <i class='fa fa-play'></i>Get Started
+          <% end %>
+            <%= link_to  mobile_apps_path, class: "footer-link" do %>
+              <i class="fal fa-mobile-alt"></i>Mobile Apps
+              <% end %>
+      </div>
+      <div class="col-md-3">
+        <h4>Manage</h4>
+        <%= link_to  analytics_path, class: "footer-link" do %>
+          <i class="fal fa-chart-line"></i>Analytics
+          <% end %>
+
+            <%= link_to  new_app_path, class: "footer-link" do %>
+              <i class='fas fa-code'></i>Create an app
+              <% end %>
+
+                <%= link_to  apps_path, class: "footer-link" do %>
+                  <i class='fal fa-fingerprint'></i> Applications
+                  <% end %>
+
+      </div>
+      <div class="col-md-3">
+        <h4>Help</h4>
+        <a href="https://deauthorized.github.io/documentation-0.1/" class="footer-link" target="_blank">
+          <i class="far fa-book"></i> Docs</a>
+
+
+        <a href="https://support.deauthorized.com/" class="footer-link" target="_blank">
+          <i class="fal fa-life-ring"></i> Support</a>
+
+
+        <a href="http://openid.net/developers/certified/" class="footer-link" target="_blank">
+          <i class="fab fa-openid"></i>OpenID Connect Docs</a>
+      </div>
+      <div class="col-md-3">
+        <h4>Learn</h4>
+        <a href="http://openid.net/connect/" target="_blank" class="footer-link">
+          <i class="fab fa-openid"></i>OpenID Connect</a>
+        <a href="https://fidoalliance.org/specs/fido-uaf-v1.1-id-20170202/fido-uaf-overview-v1.1-id-20170202.html" target="_blank" class="footer-link">
+          <i class="fal fa-fingerprint"></i>Fido UAF 1.0</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<%= render "footer_common" %>

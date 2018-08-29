@@ -1,0 +1,29 @@
+<h4>
+  User Management</h4>
+<div class="row">
+  <div class="col-md-9">
+    <h6 class="float-left">List of users:</h6>
+  </div>
+  <div class="col-md-3">
+    <p>
+      <% if policy(current_user).admin_list? %>
+        <%= link_to "Invite", new_user_invitation_path(), class: "btn btn-large btn-success float-right" %>
+          <% end %>
+    </p>
+  </div>
+</div>
+<br>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Created At</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "user", collection: @users %>
+  </tbody>
+</table>

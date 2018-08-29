@@ -1,0 +1,2 @@
+module AuthenticatedAppsHelper
+end

@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h2> App Configuration
+        <%= link_to 'Edit App Configuration', edit_app_path, class: 'btn btn-primary float-right' %>
+      </h2>
+      <%= render "app_config" %>
+    </div>
+  </div>
+  <div class="row t-60">
+    <div class="col-md-10 offset-md-1">
+      <h2>Deployment Options</h2>
+      <hr>
+    </div>
+  </div>
+  <div class="row t-60">
+    <div class="col-md-10 offset-md-1">
+      <%= render "deploy_now" %>
+    </div>
+  </div>
+  <div class="row t-60">
+    <div class="col-md-10 offset-md-1">
+      <h4>2. Build it locally and deploy
+      </h4>
+      <p>Optionally you can build the one of the sample apps locally and the deploy to heroku with the following commands.
+      </p>
+      <p>Please set <b>https:/#{myappname}.herokuapp.com/openid_auth_callback</b> as the route for the callback -
+        <%= link_to 'edit the Callback URL', edit_app_path %>
+          <p>
+            <a href="https://github.com/deauthorized" target="_blank">Sample apps on Github</a>
+          </p>
+          <ul class="nav nav-tabs" id="code" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="rails-tab" data-toggle="tab" href="#rails" role="tab" aria-controls="rails" aria-selected="true">Rails</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="django-tab" data-toggle="tab" href="#django" role="tab" aria-controls="django" aria-selected="false">Django</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="express-tab" data-toggle="tab" href="#express" role="tab" aria-controls="express" aria-selected="false">Express</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="codeContent">
+            <div class="tab-pane fade show active" id="rails" role="tabpanel" aria-labelledby="rails-tab">
+              <br>
+              <%= render "rails_heroku_config" %>
+            </div>
+            <div class="tab-pane fade" id="django" role="tabpanel" aria-labelledby="django-tab">
+              <br>
+              <%= render "django_heroku_config" %>
+            </div>
+            <div class="tab-pane fade" id="express" role="tabpanel" aria-labelledby="express-tab">
+              <br>
+              <%= render "express_heroku_config" %>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="row t-60">
+    <div class="col-md-10 offset-md-1">
+      <h4>3. Roll an OpenID Connect Client</h4>
+      <p>The OpenID spec is available online and you can roll your own authentication to connect your app to our server. </p>
+      <p>
+        Please read how to integrate an OpenID Connect Client in our
+        <a href="https://deauthorized.github.io/documentation-0.1/#introduction" target="_blank">docs.</a>
+      </p>
+      <p>
+        <a href="http://openid.net/developers/certified/" target="_blank">Certified OpenID Connect Implementations and Libraries</a>
+      </p>
+    </div>
+  </div>
+</div>

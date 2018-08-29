@@ -1,0 +1,79 @@
+  @import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+  .profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  
+  .margin-top-50 {
+    margin-top: 50px;
+  }
+  
+  .margin-top-100 {
+    margin-top: 100px;
+  }
+  
+  .margin-top-150 {
+    margin-top: 150px;
+  }
+  
+  .margin-bottom-150 {
+    margin-bottom: 150px;
+  }
+  
+  input.btn.se-btn.btn-rounded {
+    line-height: 26px;
+  }
+  
+  a.login-brand img.dark-logo {
+    width: 50%;
+  }
+  
+  .navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  }
+  
+  .navbar-nav>li>a.scrolled {
+    color: #000 !important;
+  }
+  
+  .hbspt-form {
+    width: 900px !important;
+  }
+  
+  .hs-form-70172187-f095-451f-a781-0cd4a2c6fc0f_ee756388-f52e-4559-acf9-f8dec7fcf74c fieldset {
+    max-width: 900px !important;
+  }
+  
+  @media (max-width: 480px) {
+    .main-header {
+      height: 60vh !important;
+    }
+    .main-header h1 {
+      font-size: 20px !important;
+    }
+    .da-box {
+      margin: 0px auto;
+    }
+    footer .col-md-3 {
+      margin-top: 30px;
+      padding: 0px 50px 0px;
+    }
+    footer h6,
+    footer li {
+      font-size: 18px !important;
+    }
+    footer li a {
+      margin: 10px 0px !important;
+    }
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse {
+      background-color: #fff;
+    }
+  }

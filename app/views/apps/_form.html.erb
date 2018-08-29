@@ -1,0 +1,95 @@
+<%= form_for(@app, local: true) do |form| %>
+
+  <% if app.errors.any? %>
+    <div class="error_explanation">
+      <ul>
+        <% app.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+    <% end %>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :name, "Client Name (client_name)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="The name of your application."></i>
+
+              <%= form.text_field :name, class: "form-control", placeholder: "Acme Node Application" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :client_uri, "Website / Domain URL (client_uri)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="The website URL that is using us for identity management. "></i>
+              <%= form.text_field :client_uri, class: "form-control", placeholder: "https://acme.com" %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :logo_uri, "App Logo (logo_uri)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="A URL / link to your logo or brand for your application or service. Please use a 100px X 100px square or circular image."></i>
+              <%= form.text_field :logo_uri, class: "form-control", placeholder: "https://acme.com/logo.png" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :contacts, "Contact Email (contacts)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="The contact information for the person or organization who is supporting this application - support@acme.com "></i>
+
+              <%= form.text_field :contacts, class: "form-control", placeholder: "support@acme.com" %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :policy_uri, "Policy Webpage (policy_uri)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="The website URL that hosts your privacy policy for user data privacy or GDPR compliance. "></i>
+              <%= form.text_field :policy_uri, class: "form-control", placeholder: "https://acme.com/policy" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :tos_uri, "Terms of Service Webpage (tos_uri) " %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="The website URL that hosts your terms of service for users. "></i>
+              <%= form.text_field :tos_uri, class: "form-control", placeholder: "https://acme.com/tos" %>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :platform, "Application Type (application_type)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="Web or mobile strategy. "></i>
+              <%= form.select :platform, [['Web', 'web']], {}, { class: "form-control", disabled: !app.new_record? } %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :token_endpoint_auth_method, "Token Endpoint (token_endpoint_auth_method)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="The token endpoint auth method determines how you connect with our identity provider. Our OP supports all 5 methods. If you are rolling your own OIDC Client and you can't connect, try changing this method."></i>
+              <a href="http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata" target="_blank"> Specs</a>
+              <%= form.select :token_endpoint_auth_method, App::AUTH_METHODS, {}, {class: "form-control"}  %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <%= form.label :openid_redirect_urls, "Callback URI (redirect_uri)" %> <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="You need to provide a callback URL for your client application so that our identity provider knows where to redirect the user once they are authenticated. If you are usig a pre-rolled sample app it is usually /openid_auth_callback "></i>              <i class="far fa-gem" data-toggle="tooltip" data-placement="top" title="Rails callback URL: https:/#{myappname}.herokuapp.com/openid_auth_callback"></i>
+              <i class="fab fa-python" data-toggle="tooltip" data-placement="top" title="Django callaback URL: https:/#{myappname}.herokuapp.com/openid_auth_callback "></i>
+              <i class="fab fa-node" data-toggle="tooltip" data-placement="top" title="Express callback URL: https:/#{myappname}.herokuapp.com/openid_auth_callback "></i>
+
+              <%= form.text_area :openid_redirect_urls, rows: "5", class: "form-control", placeholder: "https:/acme.com/callback" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <%= form.submit class: "btn btn-lg btn-primary" %>
+          </div>
+          <% end %>
+        </div>
+      </div>

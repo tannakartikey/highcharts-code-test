@@ -1,0 +1,19 @@
+<div class="row welcome">
+  <div class="col-md-8 offset-md-2 pt-200 pb-200">
+    <div class="">
+      <div class="text-center white">
+        <br>
+        <h3 class="t-60">The Strongest Auth, Made Simple</h3>
+        <h1 class="text-center">
+          You've been Deauthorized!
+          <br/>
+          <br/>
+          <%= content_tag :div, class: "", data: { status: @exception.status, response: @exception.response.to_s.humanize, rails: Rails.version }, onclick: ("location.href=\"#{root_url}\";" if @exception.status.to_s.first == "5" && Rails.application.routes.recognize_path("/")) do %>
+            <%= content_tag :span, @exception.description.html_safe %>
+              <% end %>
+        </h1>
+        <%= link_to "Go Back", :back %>
+      </div>
+    </div>
+  </div>
+</div>

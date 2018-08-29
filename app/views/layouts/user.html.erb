@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%= render "head_common" %>
+</head>
+
+<body>
+
+  <%= render 'user_header' %>
+    <%= render "breadcrumb" %>
+      <%= render "notices" %>
+        <div class="container t-100 pb-200">
+          <div class="row mh-500">
+            <%= render 'sidebar' %>
+              <div class="col-md-10">
+                <%= yield %>
+              </div>
+          </div>
+        </div>
+
+        <%= render 'user_footer' %>
+          <%= render 'scripts' %>
+</body>
+
+
+</html>

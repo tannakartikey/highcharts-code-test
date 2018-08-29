@@ -1,0 +1,150 @@
+h1,
+h2,
+h3 {
+  // padding-bottom: 30px;
+  font-family: "Open Sans";
+}
+
+h4,
+h5,
+h6 {
+  padding-bottom: 10px;
+}
+
+footer {
+  min-height: 250px;
+  color: #ffffff;
+  background-color: #343a40 !important
+}
+
+.map-section {
+  width: 100%;
+  height: 300px;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.more-detail-link {
+  color: #666;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.bg-faded {
+  background-color: #ffffff !important;
+}
+
+.bg-inverse {
+  background-color: #ffffff !important;
+}
+
+.navbar-brand img {
+  max-width: 240px;
+}
+
+.t-30 {
+  margin-top: 30px;
+}
+
+.t-60 {
+  margin-top: 60px;
+}
+
+.t-100 {
+  margin-top: 100px;
+}
+
+.pt-200 {
+  padding-top: 200px;
+}
+
+.p-top-50 {
+  padding-top: 60px;
+}
+
+.pb-200 {
+  padding-bottom: 200px;
+}
+
+.mh-500 {
+  min-height: 500px;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#top-apps,
+#success-rate-chart,
+#user-growth {
+  width: 100%;
+  height: 200px;
+}
+
+.d2-row {
+  min-height: 60px;
+}
+
+.sidebar {
+  padding-right: 50px;
+  position: fixed;
+}
+
+.tab-pane {
+  th {
+    width: 22VW;
+  }
+}
+
+
+/***** setup flow ******/
+
+.lang-title {
+  font-size: 30px;
+}
+
+.architecture {
+  background-image: asset_url('deauthorized-architecture.png');
+  background-size: 200px 100px;
+  // background-position: center;
+}
+
+.dash-repsonsive {
+  width: 30%;
+  height: 30%;
+}
+
+.highcharts-credits,
+path.highcharts-button-symbol {
+  display: none;
+}
+
+.footer-link {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  color: #ffffff;
+  &:hover {
+    color: #efefef;
+  }
+}
+
+footer h4 {
+  margin-top: 50px;
+}
+
+.chart-large {
+  min-height: 450px;
+}
+
+.tooltip {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: left;
+  background-color: #000;
+  border-radius: .25rem;
+}

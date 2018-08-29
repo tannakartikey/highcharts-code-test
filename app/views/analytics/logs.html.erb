@@ -1,0 +1,26 @@
+<h4>
+  Authentication Log&nbsp;
+  <small>Last 10 attempts</small>
+  <!-- <a class="float-right more-detail-link" href="#">Full authentication log<a/> -->
+</h4>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>When</th>
+      <th>User</th>
+      <th>Application</th>
+      <th>Result</th>
+      <th>Access Device</th>
+      <th>Second Factor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @authentication_logs.length > 0 %>
+      <%= render partial: "authentication_log", collection: @authentication_logs %>
+    <% else %>
+      <tr>
+        <td colspan="6" class="text-center">No matching records found.</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
