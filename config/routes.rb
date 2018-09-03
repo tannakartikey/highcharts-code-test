@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get '/get-started', to: 'setup#get_started', as: 'get-started'
   get '/pricing', to: 'setup#pricing', as: 'pricing'
   get '/analytics', to: 'analytics#index', as: 'analytics'
+  get '/user_growth_json_data', to: 'analytics#user_growth_json_data'
   get '/logs', to: 'analytics#logs', as: 'logs'
   get '/manage', to: 'manage#index', as: 'manage'
 

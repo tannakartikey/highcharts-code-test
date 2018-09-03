@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require highcharts
 //= require popper
 //= require bootstrap.min
 //= require bootstrap-sprockets
