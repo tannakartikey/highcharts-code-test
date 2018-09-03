@@ -24,3 +24,16 @@ App.create('name'=>'Acme', 'platform'=>'web', 'account_id'=>'', 'user_id'=>'3', 
 
 App.create('name'=>'Gennovacap', 'platform'=>'web', 'account_id'=>'', 'user_id'=>'4', 'openid_client_id'=>'2393bf30-75c5-42ce-8de4-5289fa87bcd3', 'openid_client_secret'=>'lsm2DC4NoKS1qBMX2s4KzYq9wlACG0rEDS5+b36g3oRvXdiFtOKgnvv2OlYezanP', 'openid_redirect_urls'=>'http://gennovacap.com/callback_url', 'openid_client_access_token'=>'', 'token_endpoint_auth_method'=>'client_secret_basic', 'logo_uri'=>'http://gennovacap.com/logo.png', 'client_uri'=>'http://gennovacap.com/', 'policy_uri'=>'http://gennovacap.com/policy', 'tos_uri'=>'http://gennovacap.com/tos', 'contacts'=>'reza@gennovacap.com')
 App.create('name'=>'Acme', 'platform'=>'web', 'account_id'=>'', 'user_id'=>'4', 'openid_client_id'=>'2393bf30-75c5-42ce-8de4-5289fa87bcd3', 'openid_client_secret'=>'lsm2DC4NoKS1qBMX2s4KzYq9wlACG0rEDS5+b36g3oRvXdiFtOKgnvv2OlYezanP', 'openid_redirect_urls'=>'http://Acme.com/callback_url', 'openid_client_access_token'=>'', 'token_endpoint_auth_method'=>'client_secret_basic', 'logo_uri'=>'http://Acme.com/logo.png', 'client_uri'=>'http://Acme.com/', 'policy_uri'=>'http://Acme.com/policy', 'tos_uri'=>'http://Acme.com/tos', 'contacts'=>'reza@Acme.com')
+
+20.times do |i|
+  begin
+    Stat.create!(
+      period_starting: i.days.ago,
+      distinct_identities: rand(1..1000),
+      app: App.first
+    )
+    print '.'
+  rescue => e
+    puts e.message
+  end
+end

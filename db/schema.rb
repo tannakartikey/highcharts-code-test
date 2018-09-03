@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180816020732) do
+ActiveRecord::Schema.define(version: 20180830113658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,27 @@ ActiveRecord::Schema.define(version: 20180816020732) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "stats", force: :cascade do |t|
+    t.string "client_id"
+    t.datetime "period_starting"
+    t.string "operation_type"
+    t.string "operation"
+    t.string "start_result"
+    t.string "finish_result"
+    t.integer "operations_started"
+    t.integer "operations_finished"
+    t.integer "distinct_identities"
+    t.integer "total_elapsed_time_minutes"
+    t.integer "total_elapsed_time_seconds"
+    t.integer "total_elapsed_time_miliseconds"
+    t.integer "average_elapsed_time_seconds"
+    t.integer "average_elapsed_time_miliseconds"
+    t.bigint "app_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["app_id"], name: "index_stats_on_app_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|
